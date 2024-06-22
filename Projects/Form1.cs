@@ -15,6 +15,7 @@ namespace Projects
         public Form1()
         {
             InitializeComponent();
+            textBox1.ReadOnly = true;
         }
 
         string Total;
