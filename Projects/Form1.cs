@@ -18,12 +18,12 @@ namespace Projects
         }
 
         string Total;
-        int num1;
-        int num2;
+        double num1;
+        double num2;
         int temp1;
         int temp2;
         string option;
-        int result;
+        double result;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -77,16 +77,17 @@ namespace Projects
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            option = "+";
-            num1 = int.Parse(textBox1.Text);
-            textBox1.Text += option;
-            //textBox1.Clear();
+                option = "+";
+                num1 = double.Parse(textBox1.Text);
+                textBox1.Text += option;
+                //textBox1.Clear();
+            
         }
 
         private void buttonDivide_Click(object sender, EventArgs e)
         {
             option = "/";
-            num1 = int.Parse(textBox1.Text);
+            num1 = double.Parse(textBox1.Text);
             textBox1.Text += option;
 
         }
@@ -94,7 +95,7 @@ namespace Projects
         private void buttonMultiply_Click(object sender, EventArgs e)
         {
             option = "*";
-            num1 = int.Parse(textBox1.Text);
+            num1 = double.Parse(textBox1.Text);
             textBox1.Text += option;
         }
 
@@ -112,7 +113,7 @@ namespace Projects
             string operand1 = expression.Substring(0, operatorIndex);
             string operand2 = expression.Substring(operatorIndex + 1);
 
-            if (!int.TryParse(operand1, out num1) || !int.TryParse(operand2, out num2))
+            if (!double.TryParse(operand1, out num1) || !double.TryParse(operand2, out num2))
             {
                 MessageBox.Show("Invalid numbers.");
                 return;
@@ -164,8 +165,24 @@ namespace Projects
         private void buttonSubtract_Click(object sender, EventArgs e)
         {
             option = "-";
-            num1 = int.Parse(textBox1.Text);
+            num1 = double.Parse(textBox1.Text);
             textBox1.Text += option;
+        }
+
+        private void buttonDot_Click(object sender, EventArgs e)
+        {
+            if (!textBox1.Text.Contains("."))
+            {
+                textBox1.Text += ".";
+            }
+        }
+
+        private void buttonC_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Length > 0)
+            {
+                textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
+            }
         }
     }
 }

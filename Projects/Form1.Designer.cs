@@ -46,6 +46,8 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEquals = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonDot = new System.Windows.Forms.Button();
+            this.buttonC = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -60,7 +62,7 @@
             // 
             this.buttonCE.Location = new System.Drawing.Point(27, 120);
             this.buttonCE.Name = "buttonCE";
-            this.buttonCE.Size = new System.Drawing.Size(222, 40);
+            this.buttonCE.Size = new System.Drawing.Size(143, 40);
             this.buttonCE.TabIndex = 1;
             this.buttonCE.Text = "CE";
             this.buttonCE.UseVisualStyleBackColor = true;
@@ -170,7 +172,7 @@
             // 
             this.button0.Location = new System.Drawing.Point(27, 382);
             this.button0.Name = "button0";
-            this.button0.Size = new System.Drawing.Size(222, 66);
+            this.button0.Size = new System.Drawing.Size(143, 66);
             this.button0.TabIndex = 12;
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = true;
@@ -226,11 +228,33 @@
             this.label1.Text = "Result";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // buttonDot
+            // 
+            this.buttonDot.Location = new System.Drawing.Point(186, 382);
+            this.buttonDot.Name = "buttonDot";
+            this.buttonDot.Size = new System.Drawing.Size(63, 66);
+            this.buttonDot.TabIndex = 18;
+            this.buttonDot.Text = ".";
+            this.buttonDot.UseVisualStyleBackColor = true;
+            this.buttonDot.Click += new System.EventHandler(this.buttonDot_Click);
+            // 
+            // buttonC
+            // 
+            this.buttonC.Location = new System.Drawing.Point(186, 120);
+            this.buttonC.Name = "buttonC";
+            this.buttonC.Size = new System.Drawing.Size(63, 40);
+            this.buttonC.TabIndex = 19;
+            this.buttonC.Text = "C";
+            this.buttonC.UseVisualStyleBackColor = true;
+            this.buttonC.Click += new System.EventHandler(this.buttonC_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(462, 502);
+            this.Controls.Add(this.buttonC);
+            this.Controls.Add(this.buttonDot);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonEquals);
             this.Controls.Add(this.buttonAdd);
@@ -276,6 +300,8 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonEquals;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonDot;
+        private System.Windows.Forms.Button buttonC;
     }
 }
 
